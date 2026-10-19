@@ -19,7 +19,7 @@
     }
   },
   "require": {
-    "drupal/core": "^9 || ^10"
+    "drupal/core": "^9 || ^10 || ^11"
   },
   "scripts": {
     "phpstan": "phpstan analyse src tests",
