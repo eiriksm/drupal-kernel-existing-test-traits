@@ -4,6 +4,9 @@ namespace eiriksm\KernelExistingTestTraits;
 
 use Drupal\Core\Entity\Entity\EntityViewDisplay;
 
+/**
+ * Trait for creating bundles and displays from existing config.
+ */
 trait ExistingBundleTrait {
   use RequireConfigAwareTrait;
   use YmlFileToDataTrait;
@@ -11,7 +14,7 @@ trait ExistingBundleTrait {
   /**
    * Create a bundle from projects config.
    */
-  public function createBundleFromConfig(string $entity_type, string $bundle) {
+  public function createBundleFromConfig(string $entity_type, string $bundle): void {
     $this->requireConfigAwareImplementation();
     // Find the bundle entity type.
     $entity_type_manager = \Drupal::entityTypeManager();
@@ -33,14 +36,14 @@ trait ExistingBundleTrait {
   /**
    * Create the default display for a bundle.
    */
-  public function createDefaultDisplay(string $entity_type, string $bundle) {
+  public function createDefaultDisplay(string $entity_type, string $bundle): void {
     $this->createDisplay($entity_type, $bundle, 'default');
   }
 
   /**
    * Create a display for a bundle.
    */
-  public function createDisplay(string $entity_type, string $bundle, string $mode) {
+  public function createDisplay(string $entity_type, string $bundle, string $mode): void {
     $display_config_file = $this->getConfigDir() . "/core.entity_view_display.$entity_type.$bundle.$mode.yml";
     $data = $this->getDataFromYmlFile($display_config_file);
     EntityViewDisplay::create($data)->save();
