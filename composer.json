@@ -34,7 +34,8 @@
     "process-timeout": 2400,
     "allow-plugins": {
       "dealerdirect/phpcodesniffer-composer-installer": true,
-      "phpstan/extension-installer": true
+      "phpstan/extension-installer": true,
+      "symfony/runtime": true
     }
   },
   "require-dev": {
