@@ -15,7 +15,7 @@ trait ExistingFieldTrait {
   /**
    * Create a field from existing config.
    */
-  public function createFieldConfigWithStorage(string $entity_type, string $bundle, string $field_name) {
+  public function createFieldConfigWithStorage(string $entity_type, string $bundle, string $field_name): void {
     $this->requireConfigAwareImplementation();
     $this->createFieldStorage($entity_type, $bundle, $field_name);
     // Then the field config.
@@ -25,7 +25,7 @@ trait ExistingFieldTrait {
   /**
    * Just the field config.
    */
-  public function createFieldConfig(string $entity_type, string $bundle, string $field_name) {
+  public function createFieldConfig(string $entity_type, string $bundle, string $field_name): void {
     $config_dir = $this->getConfigDir();
     $field_config_file = $config_dir . '/field.field.' . $entity_type . '.' . $bundle . '.' . $field_name . '.yml';
     $data = $this->getDataFromYmlFile($field_config_file);
@@ -36,7 +36,7 @@ trait ExistingFieldTrait {
   /**
    * Create a field storage from existing config.
    */
-  public function createFieldStorage(string $entity_type, string $bundle, string $field_name) {
+  public function createFieldStorage(string $entity_type, string $bundle, string $field_name): void {
     $config_dir = $this->getConfigDir();
     // Now get the file for this field. It should be named after entity type and
     // field name.
