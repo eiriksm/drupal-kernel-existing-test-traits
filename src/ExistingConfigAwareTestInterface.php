@@ -2,6 +2,9 @@
 
 namespace eiriksm\KernelExistingTestTraits;
 
+/**
+ * Interface for tests that know where the existing site config lives.
+ */
 interface ExistingConfigAwareTestInterface {
 
   /**

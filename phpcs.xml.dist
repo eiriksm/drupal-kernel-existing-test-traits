@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="drupal-kernel-existing-test-traits">
+  <description>Coding standard for drupal-kernel-existing-test-traits.</description>
+  <file>src</file>
+  <file>tests</file>
+  <arg name="extensions" value="php,inc,module,install,yml"/>
+  <arg name="colors"/>
+  <rule ref="Drupal"/>
+  <rule ref="DrupalPractice"/>
+</ruleset>
