@@ -19,7 +19,7 @@
     }
   },
   "require": {
-    "drupal/core": "^9 || ^10"
+    "drupal/core": "^9 || ^10 || ^11"
   },
   "scripts": {
     "phpstan": "phpstan analyse",
@@ -35,7 +35,8 @@
     "allow-plugins": {
       "dealerdirect/phpcodesniffer-composer-installer": true,
       "phpstan/extension-installer": true,
-      "symfony/runtime": true
+      "symfony/runtime": true,
+      "drupal/core-composer-scaffold": true
     }
   },
   "require-dev": {
